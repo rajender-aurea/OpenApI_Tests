@@ -1,0 +1,302 @@
+{
+  "openapi": "3.0.2",
+  "servers": [
+    {
+      "url": "https://cxm-rhel-qa.cx.aurea.com:3560",
+      "description": "",
+      "variables": {}
+    }
+  ],
+  "info": {
+    "version": "7d768bd5-386d-4a07-894a-a710335dc32d",
+    "title": "CLM_GetWorkflows",
+    "description": "",
+    "termsOfService": "",
+    "contact": {},
+    "license": {
+      "name": ""
+    }
+  },
+  "paths": {
+    "/CXQueryServiceSC/getWorkflows/getFlows": {
+      "get": {
+        "summary": "Get Workflows",
+        "operationId": "GetWorkflows",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/workflowName"
+          },
+          {
+            "$ref": "#/components/parameters/workflowAuthor"
+          },
+          {
+            "$ref": "#/components/parameters/startIndex"
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "$ref": "#/components/parameters/workflowType"
+          },
+          {
+            "$ref": "#/components/parameters/key"
+          },
+          {
+            "$ref": "#/components/parameters/Connection"
+          },
+          {
+            "$ref": "#/components/parameters/Pragma"
+          },
+          {
+            "$ref": "#/components/parameters/Cache-Control"
+          },
+          {
+            "$ref": "#/components/parameters/sec-ch-ua"
+          },
+          {
+            "$ref": "#/components/parameters/Accept"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/sec-ch-ua-mobile"
+          },
+          {
+            "$ref": "#/components/parameters/User-Agent"
+          },
+          {
+            "$ref": "#/components/parameters/Origin"
+          },
+          {
+            "$ref": "#/components/parameters/Sec-Fetch-Site"
+          },
+          {
+            "$ref": "#/components/parameters/Sec-Fetch-Mode"
+          },
+          {
+            "$ref": "#/components/parameters/Sec-Fetch-Dest"
+          },
+          {
+            "$ref": "#/components/parameters/Referer"
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "workflowName": {
+        "name": "workflowName",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "number"
+        }
+      },
+      "workflowAuthor": {
+        "name": "workflowAuthor",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "number"
+        }
+      },
+      "startIndex": {
+        "name": "startIndex",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "number"
+        }
+      },
+      "count": {
+        "name": "count",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "number"
+        }
+      },
+      "workflowType": {
+        "name": "workflowType",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "example": "Place"
+        }
+      },
+      "key": {
+        "name": "key",
+        "in": "query",
+        "required": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "example": "7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU%3D"
+        }
+      },
+      "Connection": {
+        "name": "Connection",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "keep-alive"
+        }
+      },
+      "Pragma": {
+        "name": "Pragma",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "no-cache"
+        }
+      },
+      "Cache-Control": {
+        "name": "Cache-Control",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "no-cache"
+        }
+      },
+      "sec-ch-ua": {
+        "name": "sec-ch-ua",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+        }
+      },
+      "Accept": {
+        "name": "Accept",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "application/json, text/plain, */*"
+        }
+      },
+      "Authorization": {
+        "name": "Authorization",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDIyOTc2LCJqdGkiOiJjU2VzYW1aaFRuSGxxU3JVQTdsZE93IiwibmJmIjoxNjIyMDIyODU2LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDE2LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwMjI5NzYsImV4cCI6MTYyMjE5NTc3NiwiaWF0VFRMIjoxNjIyMTk1Nzc2fQ.BTc_o6gA-vQsJUNNO_dTwC15w_AvSpfjMjTD2PcO1dUrUDpSktSUAqXuy9P0I9xDJqUb7NIQgNKdQTf4iR4VmKBicdDrlvxIyZh46xG_UvawhBEtbEaZWMa0gIV-xrVUs3h5yWztZV9Zub2-Q3WXPghIbMviQHLjzxMY-n6WG3tbaC2A4wsjD05XgDY1cYsoNXWu9jjj9kvnXg1l9v4wL24JDCzRmFdyyXKacbhRz24Y07fx3Q8mIo37UyUOGJvDvyeLtGinowAmZ96Ykj5JHgetlTz30FcYYVPWFS4bwpCZGwyCYpoQrLq9fMt34WcsaUnOWb4XdmmVyxdy8cth6w"
+        }
+      },
+      "sec-ch-ua-mobile": {
+        "name": "sec-ch-ua-mobile",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "?0"
+        }
+      },
+      "User-Agent": {
+        "name": "User-Agent",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+        }
+      },
+      "Origin": {
+        "name": "Origin",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "https://redhat-clm-qa.jiveon.com"
+        }
+      },
+      "Sec-Fetch-Site": {
+        "name": "Sec-Fetch-Site",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "cross-site"
+        }
+      },
+      "Sec-Fetch-Mode": {
+        "name": "Sec-Fetch-Mode",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "cors"
+        }
+      },
+      "Sec-Fetch-Dest": {
+        "name": "Sec-Fetch-Dest",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "empty"
+        }
+      },
+      "Referer": {
+        "name": "Referer",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "https://redhat-clm-qa.jiveon.com/"
+        }
+      },
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": true,
+        "style": "simple",
+        "schema": {
+          "type": "string",
+          "example": "en-US,en;q=0.9"
+        }
+      }
+    }
+  },
+  "security": [],
+  "tags": [],
+  "externalDocs": {
+    "url": "",
+    "description": ""
+  }
+}
