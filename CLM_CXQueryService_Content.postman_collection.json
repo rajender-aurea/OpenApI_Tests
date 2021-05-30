@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "c9a820dd-aed9-4928-a7f1-e4aba77795c1",
+		"name": "CLM_CXQueryService_Content",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Workflow",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDIyOTc2LCJqdGkiOiJjU2VzYW1aaFRuSGxxU3JVQTdsZE93IiwibmJmIjoxNjIyMDIyODU2LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDE2LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwMjI5NzYsImV4cCI6MTYyMjE5NTc3NiwiaWF0VFRMIjoxNjIyMTk1Nzc2fQ.BTc_o6gA-vQsJUNNO_dTwC15w_AvSpfjMjTD2PcO1dUrUDpSktSUAqXuy9P0I9xDJqUb7NIQgNKdQTf4iR4VmKBicdDrlvxIyZh46xG_UvawhBEtbEaZWMa0gIV-xrVUs3h5yWztZV9Zub2-Q3WXPghIbMviQHLjzxMY-n6WG3tbaC2A4wsjD05XgDY1cYsoNXWu9jjj9kvnXg1l9v4wL24JDCzRmFdyyXKacbhRz24Y07fx3Q8mIo37UyUOGJvDvyeLtGinowAmZ96Ykj5JHgetlTz30FcYYVPWFS4bwpCZGwyCYpoQrLq9fMt34WcsaUnOWb4XdmmVyxdy8cth6w"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/getWorkflow/getFlow?workflowId=3&key=7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU%3D",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"getWorkflow",
+						"getFlow"
+					],
+					"query": [
+						{
+							"key": "workflowId",
+							"value": "3"
+						},
+						{
+							"key": "key",
+							"value": "7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Content Workflows",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDIyOTc2LCJqdGkiOiJjU2VzYW1aaFRuSGxxU3JVQTdsZE93IiwibmJmIjoxNjIyMDIyODU2LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDE2LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwMjI5NzYsImV4cCI6MTYyMjE5NTc3NiwiaWF0VFRMIjoxNjIyMTk1Nzc2fQ.BTc_o6gA-vQsJUNNO_dTwC15w_AvSpfjMjTD2PcO1dUrUDpSktSUAqXuy9P0I9xDJqUb7NIQgNKdQTf4iR4VmKBicdDrlvxIyZh46xG_UvawhBEtbEaZWMa0gIV-xrVUs3h5yWztZV9Zub2-Q3WXPghIbMviQHLjzxMY-n6WG3tbaC2A4wsjD05XgDY1cYsoNXWu9jjj9kvnXg1l9v4wL24JDCzRmFdyyXKacbhRz24Y07fx3Q8mIo37UyUOGJvDvyeLtGinowAmZ96Ykj5JHgetlTz30FcYYVPWFS4bwpCZGwyCYpoQrLq9fMt34WcsaUnOWb4XdmmVyxdy8cth6w"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/getWorkflows/getFlows?workflowName=&workflowAuthor=&startIndex=0&count=10&workflowType=Content&key=7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU%3D",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"getWorkflows",
+						"getFlows"
+					],
+					"query": [
+						{
+							"key": "workflowName",
+							"value": ""
+						},
+						{
+							"key": "workflowAuthor",
+							"value": ""
+						},
+						{
+							"key": "startIndex",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "workflowType",
+							"value": "Content"
+						},
+						{
+							"key": "key",
+							"value": "7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Content ModerationTasks Overview",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDQyOTE1LCJqdGkiOiJLYVhpNXZVVlVOanpfa0FMcHpyV1lnIiwibmJmIjoxNjIyMDQyNzk1LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwNDI5MTUsImV4cCI6MTYyMjIxNTcxNSwiaWF0VFRMIjoxNjIyMjE1NzE1fQ.vsWdepmAGtdtuIaM8Hrn3Dkqf2RBpzeqV_eHajiz3D_BQiildVQbwZ2MEFmGf0pZwA_3WFbOl5JOKl6Zp3ta1-CeXBsPmOaUS7LeD0jkx9ZBN9SypIEJJGx0d8gzaCdtLi1SstJAMqT-lDr5XbrDM4wTnqN3FBDWpgGbDorprlysD3Y6_k6_8ioV2bQ7NHIkTFQ6Aefc-qUiE7iuPqWe_wu9DnF5KgEv5WpJY3b8-NSV3RFjOdQvxGsQfxD6nsryMyeGN0L2EF2XLYeor8KzUSOIkNXBhBnGKtsX2s3dt3MbAST6Kz-zZoG2rn4CPg1XakyO40qju2kPfSBiy6J1hQ"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/workflows/moderation/tasks/content?startIndex=0&count=30&key=RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"workflows",
+						"moderation",
+						"tasks",
+						"content"
+					],
+					"query": [
+						{
+							"key": "startIndex",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "30"
+						},
+						{
+							"key": "key",
+							"value": "RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Content ModerationTasks Pending",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDQyOTE1LCJqdGkiOiJLYVhpNXZVVlVOanpfa0FMcHpyV1lnIiwibmJmIjoxNjIyMDQyNzk1LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwNDI5MTUsImV4cCI6MTYyMjIxNTcxNSwiaWF0VFRMIjoxNjIyMjE1NzE1fQ.vsWdepmAGtdtuIaM8Hrn3Dkqf2RBpzeqV_eHajiz3D_BQiildVQbwZ2MEFmGf0pZwA_3WFbOl5JOKl6Zp3ta1-CeXBsPmOaUS7LeD0jkx9ZBN9SypIEJJGx0d8gzaCdtLi1SstJAMqT-lDr5XbrDM4wTnqN3FBDWpgGbDorprlysD3Y6_k6_8ioV2bQ7NHIkTFQ6Aefc-qUiE7iuPqWe_wu9DnF5KgEv5WpJY3b8-NSV3RFjOdQvxGsQfxD6nsryMyeGN0L2EF2XLYeor8KzUSOIkNXBhBnGKtsX2s3dt3MbAST6Kz-zZoG2rn4CPg1XakyO40qju2kPfSBiy6J1hQ"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/workflows/4/moderation/content/tasks/pending?startIndex=0&count=10&key=RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"workflows",
+						"4",
+						"moderation",
+						"content",
+						"tasks",
+						"pending"
+					],
+					"query": [
+						{
+							"key": "startIndex",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "key",
+							"value": "RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Content ModerationTasks Completed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDQyOTE1LCJqdGkiOiJLYVhpNXZVVlVOanpfa0FMcHpyV1lnIiwibmJmIjoxNjIyMDQyNzk1LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwNDI5MTUsImV4cCI6MTYyMjIxNTcxNSwiaWF0VFRMIjoxNjIyMjE1NzE1fQ.vsWdepmAGtdtuIaM8Hrn3Dkqf2RBpzeqV_eHajiz3D_BQiildVQbwZ2MEFmGf0pZwA_3WFbOl5JOKl6Zp3ta1-CeXBsPmOaUS7LeD0jkx9ZBN9SypIEJJGx0d8gzaCdtLi1SstJAMqT-lDr5XbrDM4wTnqN3FBDWpgGbDorprlysD3Y6_k6_8ioV2bQ7NHIkTFQ6Aefc-qUiE7iuPqWe_wu9DnF5KgEv5WpJY3b8-NSV3RFjOdQvxGsQfxD6nsryMyeGN0L2EF2XLYeor8KzUSOIkNXBhBnGKtsX2s3dt3MbAST6Kz-zZoG2rn4CPg1XakyO40qju2kPfSBiy6J1hQ"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/workflows/4/moderation/content/tasks/completed?startIndex=0&count=10&key=RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"workflows",
+						"4",
+						"moderation",
+						"content",
+						"tasks",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "startIndex",
+							"value": "0"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "key",
+							"value": "RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete ModerationTasks Content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDQyOTE1LCJqdGkiOiJLYVhpNXZVVlVOanpfa0FMcHpyV1lnIiwibmJmIjoxNjIyMDQyNzk1LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwNDI5MTUsImV4cCI6MTYyMjIxNTcxNSwiaWF0VFRMIjoxNjIyMjE1NzE1fQ.vsWdepmAGtdtuIaM8Hrn3Dkqf2RBpzeqV_eHajiz3D_BQiildVQbwZ2MEFmGf0pZwA_3WFbOl5JOKl6Zp3ta1-CeXBsPmOaUS7LeD0jkx9ZBN9SypIEJJGx0d8gzaCdtLi1SstJAMqT-lDr5XbrDM4wTnqN3FBDWpgGbDorprlysD3Y6_k6_8ioV2bQ7NHIkTFQ6Aefc-qUiE7iuPqWe_wu9DnF5KgEv5WpJY3b8-NSV3RFjOdQvxGsQfxD6nsryMyeGN0L2EF2XLYeor8KzUSOIkNXBhBnGKtsX2s3dt3MbAST6Kz-zZoG2rn4CPg1XakyO40qju2kPfSBiy6J1hQ"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://redhat-clm-qa.jiveon.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://redhat-clm-qa.jiveon.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"completePlaceModerationTasks\":{\"approval\":\"Approved\",\"taskNames\":[\"CLMContentModeration#732::ContentApproval::fabio.lanza@aurea.com\"],\"key\":\"RgGqlfCMLz9ujILwalTx/Yu4ihzRQBl4vcvm42sDixA=\"}}"
+				},
+				"url": {
+					"raw": "https://cxm-rhel-qa.cx.aurea.com:3560/CXQueryServiceSC/workflows/4/moderation/content/taskStatus",
+					"protocol": "https",
+					"host": [
+						"cxm-rhel-qa",
+						"cx",
+						"aurea",
+						"com"
+					],
+					"port": "3560",
+					"path": [
+						"CXQueryServiceSC",
+						"workflows",
+						"4",
+						"moderation",
+						"content",
+						"taskStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
