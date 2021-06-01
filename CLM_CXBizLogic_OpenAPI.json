@@ -1,0 +1,110 @@
+{
+   "openapi":"3.0.0",
+   "servers":[
+      {
+         "url":"https://cxm-rhel-qa.cx.aurea.com:3595",
+         "description":"",
+         "variables":{
+            
+         }
+      }
+   ],
+   "info":{
+      "version":"5f16e616-6ab0-466c-b776-45f19c10a3ff",
+      "title":"CLM_CXBizLogic",
+      "description":"",
+      "termsOfService":"",
+      "contact":{
+         
+      },
+      "license":{
+         "name":""
+      }
+   },
+   "paths":{
+      "/CXBizLogicSC/CreatePI/create":{
+         "post":{
+            "summary":"CreatePI",
+            "description":"CreatePI",
+            "operationId":"CreatePI",
+            "parameters":[
+               {
+                  "$ref":"#/components/parameters/Authorization"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"",
+                  "headers":{
+                     
+                  }
+               }
+            },
+            "requestBody":{
+               "description":"CreatePI",
+               "required":true,
+               "content":{
+                  "text/plain;charset=UTF-8":{
+                     "schema":{
+                        "type":"string",
+                        "example":{
+                           "ptName":"CLMWorkflowManager",
+                           "piNamePrefix":"CLMWorkflowManager",
+                           "priority":"medium",
+                           "dst":[
+                              {
+                                 "objectClassName":"",
+                                 "isReadOnly":true,
+                                 "name":"WorkflowAction",
+                                 "isWriteOnly":false,
+                                 "ptid":1,
+                                 "choices":"",
+                                 "type":"STRING",
+                                 "value":"Create"
+                              },
+                              {
+                                 "objectClassName":"",
+                                 "isReadOnly":true,
+                                 "name":"WorkflowDefinition",
+                                 "isWriteOnly":false,
+                                 "ptid":1,
+                                 "choices":"",
+                                 "type":"XML",
+                                 "value":"<u0021[CDATA[<Workflow><WorkflowId>2</WorkflowId><WorkflowName>AD_NoPlaceadmin_Archive</WorkflowName><WorkflowType>Place</WorkflowType><WorkflowAuthor>51026</WorkflowAuthor><WorkflowLastModifier>51016</WorkflowLastModifier><WorkflowActivationTime>1621262179634</WorkflowActivationTime><WorkflowEndTime></WorkflowEndTime><WorkflowStatus>Enabled</WorkflowStatus><WorkflowCategory>CLM</WorkflowCategory><WorkflowPublishTime>1621262179634</WorkflowPublishTime><WorkflowModificationTime>1621262179634</WorkflowModificationTime><Places></Places><PlaceTypes><PlaceType><PlaceTypeId>2</PlaceTypeId><PlaceTypeName>group</PlaceTypeName><PlaceTypeStatus>Enabled</PlaceTypeStatus></PlaceType></PlaceTypes><ContentTypes></ContentTypes><Reviewers></Reviewers><RuleSet><Rule><RuleId>2</RuleId><RuleName>If group has no place admin, Notify</RuleName><Trigger><TriggerId>2</TriggerId><TriggerType>NoPlaceAdmin</TriggerType><TriggerValue>-1</TriggerValue></Trigger><Actions><Action><ActionId>2</ActionId><ActionType>Notify</ActionType><TargetLocation></TargetLocation><OutcomeType></OutcomeType><CommentText></CommentText><Notification><NotificationId>1</NotificationId><Subject>test</Subject><Text>test</Text><RecipientTypes><RecipientType><RecipientTypeId>1</RecipientTypeId><RecipientTypeName>PlaceAdmin</RecipientTypeName></RecipientType></RecipientTypes></Notification><ActionStatus>Enabled</ActionStatus></Action></Actions><RuleActivationTime>1621262179634</RuleActivationTime><RuleEndTime></RuleEndTime><RuleStatus>Enabled</RuleStatus><RulePublishTime>1621262179634</RulePublishTime><RuleModificationTime>1621262179634</RuleModificationTime></Rule></RuleSet></Workflow>]]>"
+                              }
+                           ],
+                           "key":"7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU="
+                        }
+                     },
+                     "example":"{\"ptName\":\"CLMWorkflowManager\",\"piNamePrefix\":\"CLMWorkflowManager\",\"priority\":\"medium\",\"dst\":[{\"objectClassName\":\"\",\"isReadOnly\":true,\"name\":\"WorkflowAction\",\"isWriteOnly\":false,\"ptid\":1,\"choices\":\"\",\"type\":\"STRING\",\"value\":\"Create\"},{\"objectClassName\":\"\",\"isReadOnly\":true,\"name\":\"WorkflowDefinition\",\"isWriteOnly\":false,\"ptid\":1,\"choices\":\"\",\"type\":\"XML\",\"value\":\"<u0021[CDATA[<Workflow><WorkflowId>2</WorkflowId><WorkflowName>AD_NoPlaceadmin_Archive</WorkflowName><WorkflowType>Place</WorkflowType><WorkflowAuthor>51026</WorkflowAuthor><WorkflowLastModifier>51016</WorkflowLastModifier><WorkflowActivationTime>1621262179634</WorkflowActivationTime><WorkflowEndTime></WorkflowEndTime><WorkflowStatus>Enabled</WorkflowStatus><WorkflowCategory>CLM</WorkflowCategory><WorkflowPublishTime>1621262179634</WorkflowPublishTime><WorkflowModificationTime>1621262179634</WorkflowModificationTime><Places></Places><PlaceTypes><PlaceType><PlaceTypeId>2</PlaceTypeId><PlaceTypeName>group</PlaceTypeName><PlaceTypeStatus>Enabled</PlaceTypeStatus></PlaceType></PlaceTypes><ContentTypes></ContentTypes><Reviewers></Reviewers><RuleSet><Rule><RuleId>2</RuleId><RuleName>If group has no place admin, Notify</RuleName><Trigger><TriggerId>2</TriggerId><TriggerType>NoPlaceAdmin</TriggerType><TriggerValue>-1</TriggerValue></Trigger><Actions><Action><ActionId>2</ActionId><ActionType>Notify</ActionType><TargetLocation></TargetLocation><OutcomeType></OutcomeType><CommentText></CommentText><Notification><NotificationId>1</NotificationId><Subject>test</Subject><Text>test</Text><RecipientTypes><RecipientType><RecipientTypeId>1</RecipientTypeId><RecipientTypeName>PlaceAdmin</RecipientTypeName></RecipientType></RecipientTypes></Notification><ActionStatus>Enabled</ActionStatus></Action></Actions><RuleActivationTime>1621262179634</RuleActivationTime><RuleEndTime></RuleEndTime><RuleStatus>Enabled</RuleStatus><RulePublishTime>1621262179634</RulePublishTime><RuleModificationTime>1621262179634</RuleModificationTime></Rule></RuleSet></Workflow>]]>\"}],\"key\":\"7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU=\"}"
+                  }
+               }
+            }
+         }
+      }
+   },
+   "components":{
+      "parameters":{
+         "Authorization":{
+            "name":"Authorization",
+            "in":"header",
+            "required":true,
+            "style":"simple",
+            "schema":{
+               "type":"string",
+               "example":"Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDIyOTc2LCJqdGkiOiJjU2VzYW1aaFRuSGxxU3JVQTdsZE93IiwibmJmIjoxNjIyMDIyODU2LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDE2LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwMjI5NzYsImV4cCI6MTYyMjE5NTc3NiwiaWF0VFRMIjoxNjIyMTk1Nzc2fQ.BTc_o6gA-vQsJUNNO_dTwC15w_AvSpfjMjTD2PcO1dUrUDpSktSUAqXuy9P0I9xDJqUb7NIQgNKdQTf4iR4VmKBicdDrlvxIyZh46xG_UvawhBEtbEaZWMa0gIV-xrVUs3h5yWztZV9Zub2-Q3WXPghIbMviQHLjzxMY-n6WG3tbaC2A4wsjD05XgDY1cYsoNXWu9jjj9kvnXg1l9v4wL24JDCzRmFdyyXKacbhRz24Y07fx3Q8mIo37UyUOGJvDvyeLtGinowAmZ96Ykj5JHgetlTz30FcYYVPWFS4bwpCZGwyCYpoQrLq9fMt34WcsaUnOWb4XdmmVyxdy8cth6w"
+            }
+         }
+      }
+   },
+   "security":[
+      
+   ],
+   "tags":[
+      
+   ],
+   "externalDocs":{
+      "url":"",
+      "description":""
+   }
+}
