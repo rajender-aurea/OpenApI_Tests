@@ -81,6 +81,41 @@
                }
             }
          }
+      },
+      "/CXBizLogicSC/GetWorkStepDataSlots/getDataSlots":{
+         "get":{
+            "summary":"GetPIDataSlots",
+            "operationId":"GetPIDataSlots",
+            "parameters":[
+               {
+                  "$ref":"#/components/parameters/ptName"
+               },
+               {
+                  "$ref":"#/components/parameters/wsName"
+               },
+               {
+                  "$ref":"#/components/parameters/key"
+               },
+               {
+                  "name":"Authorization",
+                  "in":"header",
+                  "required":true,
+                  "style":"simple",
+                  "schema":{
+                     "type":"string",
+                     "example":"Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIzMTM1NzEyLCJqdGkiOiJFRk43QXNLczkxZ0VKR090LWtRMGxBIiwibmJmIjoxNjIzMTM1NTkyLCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjMxMzU3MTIsImV4cCI6MTYyMzMwODUxMiwiaWF0VFRMIjoxNjIzMzA4NTEyfQ.hnp9so2ZYelMgTDU09dsJpglUFEKqlwqu1UMVJxd4_139Kt7nUJTWR8hkQyoPFJTzERYdt6mXbxKseHGgi6JjmJNa0HY_J0-FbgAcU7XUpVC1jyGG8WGnfo5EdPIM0ZwfFHxnLzS3zTuVShqJDbSz2LqFjPLk5qERdDCFnZCPtfPGiQo5EhVl3MN6zImLoodCTrdIc596Opi_tDUDQiBHXWskZnjDnP-nK7uXgK0yIywL3m4B8MNyE99qHnK8JS4wIQ4DuaqYX2RcFVoLfvTqqBy0fC3trb0aN8NwGs8TjtGDW7bjsLnixdWX7o4vp1jNv3Gr_y1dAAn5yOF76RD6Q"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"",
+                  "headers":{
+                     
+                  }
+               }
+            }
+         }
       }
    },
    "components":{
@@ -92,7 +127,37 @@
             "style":"simple",
             "schema":{
                "type":"string",
-               "example":"Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIyMDIyOTc2LCJqdGkiOiJjU2VzYW1aaFRuSGxxU3JVQTdsZE93IiwibmJmIjoxNjIyMDIyODU2LCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDE2LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjIwMjI5NzYsImV4cCI6MTYyMjE5NTc3NiwiaWF0VFRMIjoxNjIyMTk1Nzc2fQ.BTc_o6gA-vQsJUNNO_dTwC15w_AvSpfjMjTD2PcO1dUrUDpSktSUAqXuy9P0I9xDJqUb7NIQgNKdQTf4iR4VmKBicdDrlvxIyZh46xG_UvawhBEtbEaZWMa0gIV-xrVUs3h5yWztZV9Zub2-Q3WXPghIbMviQHLjzxMY-n6WG3tbaC2A4wsjD05XgDY1cYsoNXWu9jjj9kvnXg1l9v4wL24JDCzRmFdyyXKacbhRz24Y07fx3Q8mIo37UyUOGJvDvyeLtGinowAmZ96Ykj5JHgetlTz30FcYYVPWFS4bwpCZGwyCYpoQrLq9fMt34WcsaUnOWb4XdmmVyxdy8cth6w"
+               "example":"Bearer eyJraWQiOiI0MjRlYTJkOC1hNGM3LTQ3NWQtYjg3My05YjJjMWU4MGE3MjIiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKaXZlIiwiYXVkIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjIzMTM1NzEyLCJqdGkiOiJFRk43QXNLczkxZ0VKR090LWtRMGxBIiwibmJmIjoxNjIzMTM1NTkyLCJzdWIiOiJqaXZlLWF1dGhlbnRpY2F0aW9uIiwidGVuYW50SWQiOiJiMDdjYTk4Ny00NDlkLTQzYTctOTE0Zi05ZTFlNjVhZjUyZDMiLCJ1c2VySWQiOjUxMDI0LCJjbGllbnRJZCI6Im5sbDVueTJqdjRqMjg3NzJjMnJueWY5cGdsYncwanh4LmkiLCJ0eXAiOiJKV1QiLCJhdXRoX3RpbWUiOjE2MjMxMzU3MTIsImV4cCI6MTYyMzMwODUxMiwiaWF0VFRMIjoxNjIzMzA4NTEyfQ.hnp9so2ZYelMgTDU09dsJpglUFEKqlwqu1UMVJxd4_139Kt7nUJTWR8hkQyoPFJTzERYdt6mXbxKseHGgi6JjmJNa0HY_J0-FbgAcU7XUpVC1jyGG8WGnfo5EdPIM0ZwfFHxnLzS3zTuVShqJDbSz2LqFjPLk5qERdDCFnZCPtfPGiQo5EhVl3MN6zImLoodCTrdIc596Opi_tDUDQiBHXWskZnjDnP-nK7uXgK0yIywL3m4B8MNyE99qHnK8JS4wIQ4DuaqYX2RcFVoLfvTqqBy0fC3trb0aN8NwGs8TjtGDW7bjsLnixdWX7o4vp1jNv3Gr_y1dAAn5yOF76RD6Q"
+            }
+         },
+         "ptName":{
+            "name":"ptName",
+            "in":"query",
+            "required":true,
+            "style":"form",
+            "schema":{
+               "type":"string",
+               "example":"CLMWorkflowManager"
+            }
+         },
+         "wsName":{
+            "name":"wsName",
+            "in":"query",
+            "required":true,
+            "style":"form",
+            "schema":{
+               "type":"string",
+               "example":"Start"
+            }
+         },
+         "key":{
+            "name":"key",
+            "in":"query",
+            "required":true,
+            "style":"form",
+            "schema":{
+               "type":"string",
+               "example":"RgGqlfCMLz9ujILwalTx%2FYu4ihzRQBl4vcvm42sDixA%3D"
             }
          }
       }
@@ -106,5 +171,6 @@
    "externalDocs":{
       "url":"",
       "description":""
-   }
+   },
+   
 }
