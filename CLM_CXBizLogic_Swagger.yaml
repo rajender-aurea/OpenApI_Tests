@@ -1,0 +1,107 @@
+swagger: '2.0'
+host: 'cxm-rhel-qa.cx.aurea.com:3595'
+schemes:
+  - https
+basePath: /CXBizLogicSC
+info:
+  version: '1.0'
+  title: CLM CXBizLogic Services
+  description: ''
+  termsOfService: ''
+  contact: {}
+  license:
+    name: ''
+paths:
+  /CreatePI/create:
+    post:
+      summary: CreatePI
+      description: CreatePI
+      operationId: CreatePI
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+        - description: CreatePI
+          required: true
+          name: body
+          in: body
+          schema:
+            type: string
+            example:
+              ptName: CLMWorkflowManager
+              piNamePrefix: CLMWorkflowManager
+              priority: medium
+              dst:
+                - objectClassName: ''
+                  isReadOnly: true
+                  name: WorkflowAction
+                  isWriteOnly: false
+                  ptid: 1
+                  choices: ''
+                  type: STRING
+                  value: Create
+                - objectClassName: ''
+                  isReadOnly: true
+                  name: WorkflowDefinition
+                  isWriteOnly: false
+                  ptid: 1
+                  choices: ''
+                  type: XML
+                  value: '<u0021[CDATA[<Workflow><WorkflowId>2</WorkflowId><WorkflowName>AD_NoPlaceadmin_Archive</WorkflowName><WorkflowType>Place</WorkflowType><WorkflowAuthor>51026</WorkflowAuthor><WorkflowLastModifier>51016</WorkflowLastModifier><WorkflowActivationTime>1621262179634</WorkflowActivationTime><WorkflowEndTime></WorkflowEndTime><WorkflowStatus>Enabled</WorkflowStatus><WorkflowCategory>CLM</WorkflowCategory><WorkflowPublishTime>1621262179634</WorkflowPublishTime><WorkflowModificationTime>1621262179634</WorkflowModificationTime><Places></Places><PlaceTypes><PlaceType><PlaceTypeId>2</PlaceTypeId><PlaceTypeName>group</PlaceTypeName><PlaceTypeStatus>Enabled</PlaceTypeStatus></PlaceType></PlaceTypes><ContentTypes></ContentTypes><Reviewers></Reviewers><RuleSet><Rule><RuleId>2</RuleId><RuleName>If group has no place admin, Notify</RuleName><Trigger><TriggerId>2</TriggerId><TriggerType>NoPlaceAdmin</TriggerType><TriggerValue>-1</TriggerValue></Trigger><Actions><Action><ActionId>2</ActionId><ActionType>Notify</ActionType><TargetLocation></TargetLocation><OutcomeType></OutcomeType><CommentText></CommentText><Notification><NotificationId>1</NotificationId><Subject>test</Subject><Text>test</Text><RecipientTypes><RecipientType><RecipientTypeId>1</RecipientTypeId><RecipientTypeName>PlaceAdmin</RecipientTypeName></RecipientType></RecipientTypes></Notification><ActionStatus>Enabled</ActionStatus></Action></Actions><RuleActivationTime>1621262179634</RuleActivationTime><RuleEndTime></RuleEndTime><RuleStatus>Enabled</RuleStatus><RulePublishTime>1621262179634</RulePublishTime><RuleModificationTime>1621262179634</RuleModificationTime></Rule></RuleSet></Workflow>]]>'
+              key: 7u57D0snNAK6eezT30AIcDUd5OjVpwQqluPdZS0jYaU=
+      responses:
+        '200':
+          description: CreatePI operation success
+          headers: {}
+      consumes:
+        - text/plain;charset=UTF-8
+  /GetWorkStepDataSlots/getDataSlots:
+    get:
+      summary: GetPIDataSlots
+      operationId: GetPIDataSlots
+      parameters:
+        - name: ptName
+          in: query
+          required: true
+          type: string
+        - name: wsName
+          in: query
+          required: true
+          type: string
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: getDataSlots operation success
+          headers: {}
+security: []
+tags: []
+x-components:
+  parameters:
+    Authorization:
+      name: Authorization
+      in: header
+      required: true
+      type: string
+    ptName:
+      name: ptName
+      in: query
+      required: true
+      type: string
+    wsName:
+      name: wsName
+      in: query
+      required: true
+      type: string
+    key:
+      name: key
+      in: query
+      required: true
+      type: string

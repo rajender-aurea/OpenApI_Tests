@@ -1,0 +1,360 @@
+swagger: '2.0'
+host: 'cxm-rhel-qa.cx.aurea.com:3560'
+schemes:
+  - https
+basePath: /CXQueryServiceSC
+info:
+  version: '1.0'
+  title: CLM_CXQueryService
+  description: ''
+  termsOfService: ''
+  contact: {}
+  license:
+    name: ''
+paths:
+  /getWorkflows/getFlows:
+    get:
+      summary: Get Workflows
+      operationId: GetWorkflows
+      parameters:
+        - name: workflowName
+          in: query
+          required: false
+          type: number
+        - name: workflowAuthor
+          in: query
+          required: false
+          type: number
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: workflowType
+          in: query
+          required: true
+          type: string
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /getWorkflow/getFlow:
+    get:
+      summary: Get Workflow
+      operationId: GetWorkflow
+      parameters:
+        - name: workflowId
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/moderation/tasks/place:
+    get:
+      summary: Get Place ModerationTasks Overview
+      operationId: GetPlaceModerationTasksOverview
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/{workflowId}/moderation/place/tasks/pending:
+    get:
+      summary: Get Place ModerationTasks Pending
+      operationId: GetPlaceModerationTasksPending
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/{workflowId}/moderation/place/tasks/completed:
+    get:
+      summary: Get Place ModerationTasks Completed
+      operationId: GetPlaceModerationTasksCompleted
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/moderation/tasks/content:
+    get:
+      summary: Get Content ModerationTasks Overview
+      operationId: GetContentModerationTasksOverview
+      parameters:
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/{workflowId}/moderation/content/tasks/pending:
+    get:
+      summary: Get Content ModerationTasks Pending
+      operationId: GetContentModerationTasksPending
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/{workflowId}/moderation/content/tasks/completed:
+    get:
+      summary: Get Content ModerationTasks Completed
+      operationId: GetContentModerationTasksCompleted
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: startIndex
+          in: query
+          required: true
+          type: number
+        - name: count
+          in: query
+          required: true
+          type: number
+        - name: key
+          in: query
+          required: true
+          type: string
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+  /workflows/{workflowId}/moderation/content/taskStatus:
+    post:
+      summary: Complete ModerationTasks Content
+      operationId: CompleteModerationTasksContent
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/CLMContentModeration"
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+      consumes:
+        - text/plain;charset=UTF-8
+  /workflows/{workflowId}/moderation/place/taskStatus:
+    post:
+      summary: Complete ModerationTasks Place
+      operationId: CompleteModerationTasksPlace
+      parameters:
+        - name: workflowId
+          in: path
+          required: true
+          type: number
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/CLMPlaceModeration"
+      responses:
+        '200':
+          description: SUCCESS
+          headers: {}
+      consumes:
+        - text/plain;charset=UTF-8
+security: []
+tags: []
+x-components:
+  parameters:
+    workflowName:
+      name: workflowName
+      in: query
+      required: true
+      type: number
+    workflowAuthor:
+      name: workflowAuthor
+      in: query
+      required: true
+      type: number
+    startIndex:
+      name: startIndex
+      in: query
+      required: true
+      type: number
+    count:
+      name: count
+      in: query
+      required: true
+      type: number
+    workflowType:
+      name: workflowType
+      in: query
+      required: true
+      type: string
+    key:
+      name: key
+      in: query
+      required: true
+      type: string
+    Authorization:
+      name: Authorization
+      in: header
+      required: true
+      type: string
+    workflowId:
+      name: workflowId
+      in: query
+      required: true
+      type: number
+definitions:
+  CLMContentModeration:
+    type: "object"
+    properties:
+      completeContentModerationTasks:
+        type: "object"
+        properties:
+              approval:
+                type: string
+              taskNames:
+                type: array
+                items:
+                  type: string
+              key:
+                type: string
+  CLMPlaceModeration:
+    type: "object"
+    properties:
+      completePlaceModerationTasks:
+        type: "object"
+        properties:
+              approval:
+                type: string
+              taskNames:
+                type: array
+                items:
+                  type: string
+              key:
+                type: string              
+        
